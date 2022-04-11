@@ -1,196 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="description"
-        content="Correct method to calculate Tolerance of any dimension and a Tolerance calculator to calculate tolerance.">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6233278686900432"
-        crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <title>Calculate tolerance and Tolerance Calculator | Engineer Point</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type="image/x-icon">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        * {
-            font-family: 'Padauk', sans-serif;
+        .container{
+            height: 200px;;
+            width:500px;
+            background-color: #fabf;
         }
     </style>
 </head>
-
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
-        <div class="container-fluid">
-            <a class="navbar-brand text-decoration-none" href="index.html">ENGINEER POINT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-decoration-none" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-decoration-none" href="#" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Topics
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item nav-link text-decoration-none text-dark"
-                                    href="/mechanical.html">Mechanical</a></li>
-                            <li><a class="dropdown-item nav-link text-decoration-none text-dark"
-                                    href="/electrical.html">Electrical</a></li>
-                            <li><a class="dropdown-item nav-link text-decoration-none text-dark"
-                                    href="/hydraulics.html">Hydraulics</a></li>
-                            <li><a class="dropdown-item nav-link text-decoration-none text-dark"
-                                    href="/pneumatics.html">Pneumatics</a></li>
-                            <li><a class="dropdown-item nav-link text-decoration-none text-dark"
-                                    href="/electropneumatics.html">Electroneumatics</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-decoration-none" href="/calculation.html">Calculate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-decoration-none" href="/questions.html">Ques&Ans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-decoration-none" href="/contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container" style="max-width: 600px; height: auto;">
+    <h1>Sachin Yadav</h1>
+    <div class="container">
 
-        <h3 class="my-5">How to calculate Tolerance? | <a class="text-decoration-none" href="#tolerance_calculator">Calculator</a> </h3>
-        <p>
-            <strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tolerance itself means
-                scope of deviation in dimension. </strong>It sepecifies what can
-            be the maximun and
-            minimum
-            deviation for a given dimension. Tolerance has a upper deviation limit and lower deviation
-            limit.
-            With
-            that we can specify a upper dimension i.e what can be the maximum dimension and lower dimension
-            i.e.
-            what can be the minimum dimension. For example. 25±0.2mm.
-        </p>
-        <p>     Nominal Dimension = 25</p>
-        <p>     Upper deviation = +0.2</p>
-        <p>     Lower deviation = -0.2</p>
-        <p>     Upper Dimension = Nominal dimension + Upper deviation</p>
-        <p>     Upper Dimension = 25 + (+0.2) = 25.2........(1)</p>
-        <p>     Lower Dimension = Nominal dimension + Lower deviation</p>
-        <p>     Lower Dimension = 25 + (-0.2) = 24.8........(2)</p>
-        <p>     Tolerance = Upper dimension - Lower Dimension</p>
-        <p>     Tolerance = 25.2 - 24.8 = 0.4........(3)</p>
-        
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here we have upper deviation of 0.2mm
-            and
-            lower deviation of 0.2mm. So we can now calculate 25+0.2=25.2mm is the upperlimit of the
-            dimesion
-            gievn.
-            Now 25-0.2=24.8mm is the lower limit. Now we can calculate Tolerance. It is Upper limit - Lower
-            limit.
-            i.e. 25.2 - 24.8=0.4mm is the tolerance. There are standard tables specified by ISO standard for
-            tolerance classes. </p>
-            
-        <p>Let's take another example.
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="tolerance_chart.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Tolerance_chart2.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </p>
-        <P>
-            Now that you
-            have
-            understood the tolerance calculation, with the help of <a href="#tolerance_calculator" class="text-decoration-none">calculator</a> given below find out the
-            tolerance
-            you
-            want.</p>
-        <p class="my-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In ISO standard
-            <strong> DIN ISO 286-2 (1990-11)</strong>,here some tolerance
-            class defined with every
-            dimension.
-            eg 20 H7, here 20 is nominal
-            dimension and H6 is tolerance class. The maximum and minimum
-            deviation
-            for H7 is +0.021 and minimum is 0. It means you have to maintain the workpiece between
-            20.000 to
-            20.021. So the tolerance is of 0.021mm.
-        </p>
-        <div id="tolerance_calculator">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Nominal dimension</span>
-                <input id= "nominal_dimension" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-              </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Upper Deviation</span>
-                <input id= "upper_deviation" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-              </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Lower Deviation</span>
-                <input id= "lower_deviation" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-              </div>
-              <button type="button" onclick="calculate_tolerance()" class="btn btn-outline-success">Calculate</button> <br>
-              <textarea class="d-inline-block" name="" id="tolerance_answer"
-              style="resize: none; margin: 25px auto; width: 250px; height: 100px;"></textarea>
-              <script>
-                  function calculate_tolerance(){
-                      var nominal_dimension = document.getElementById("nominal_dimension").value;
-                      var upper_deviation = document.getElementById("upper_deviation").value;
-                      var lower_deviation = document.getElementById("lower_deviation").value;
-                      var upper_dimension = (nominal_dimension * 1) + (1*upper_deviation);
-                      var lower_dimension = (nominal_dimension * 1) + (1*lower_deviation);
-                      var tolerance = (upper_dimension - lower_dimension).toFixed(5);
-                      var ans = "Upper Dimension = " + upper_dimension + "mm\n" + "Lower Dimension = " + lower_dimension + "mm\n"+ "Tolerance = " + tolerance + "mm"
-                      document.getElementById("tolerance_answer").value=ans;
-
-                  }
-              </script>
-        </div>
-        <div class="my-4">
-            <a href="/directional_valve.html"><button type="button" class="btn btn-primary my-2">Directional
-                    Valve</button></a>
-            <a href="/pneumatic_valve.html"><button type="button" class="btn btn-primary my-2">Pneumatic
-                    Valves</button></a>
-            <a href="/hydraulics.html"><button type="button" class="btn btn-primary my-2">Hydraulics</button></a>
-            <a href="/mechanical.html"><button type="button" class="btn btn-primary my-2">Mechanical</button></a>
-            <a href="/electrical.html"><button type="button" class="btn btn-primary my-2">Electrical</button></a>
-            <a href="/electropneumatics.html"><button type="button"
-                    class="btn btn-primary my-2">Electropneumatics</button></a>
-            <a href="/cylinder_force_calculator.html"><button type="button" class="btn btn-primary my-2">Cylinder Force
-                    Calculator</button></a>
-            <a href="/logic_gates.html" class="text-decoration-none"><button type="button"
-                    class="btn btn-primary my-2">Logical Circuit</button></a>
-        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
 </body>
 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+echo "PHP entered"
+$conn = mysqli_connect($servername, $username, $password);
+
+if (!$conn){
+    echo "PHP failed"
+    die("failed to connect".mysqli_connect_error());
+}
+else{
+    echo "connection successful";
+}
+
+
+
+?>
 </html>
